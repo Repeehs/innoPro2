@@ -22,7 +22,8 @@ connection.query(`CREATE DATABASE IF NOT EXISTS ${database_name}`, function(err)
     const create_table_query = `
         CREATE TABLE IF NOT EXISTS ${table_name} (
             id INT AUTO_INCREMENT PRIMARY KEY,
-            username VARCHAR(50) NOT NULL UNIQUE,
+            username VARCHAR(50) NOT NULL,
+            email VARCHAR(100) NOT NULL UNIQUE,
             password VARCHAR(50) NOT NULL
     )`
 

@@ -11,9 +11,9 @@ app.use(express.urlencoded({ extended: true })); // built-in middleware to handl
 app.use(express.json()); // built-in middleware for json
 
 
-app.post('/user', async (req, res) => {
+app.post('api/user', async (req, res) => {
     try {
-        connection.query(`INSERT INTO user(username, password) VALUES(?, ?)`, [req.body.username, req.body.password], function (err) {
+        connection.query(`INSERT INTO user(${username}, ${email}, ${password}) VALUES(?, ?)`, [req.body.username, req.body.email, req.body.password], function (err) {
             if (err) throw err;
             res.status(200).send("User Added Successfully !")
         })
@@ -54,5 +54,6 @@ app.listen(port, () => {
     console.log(`Server is running on port ${port}`)
     console.log(`Database is connected to ${process.env.RDS_ENDPOINT}`)
 })
-
-module.exports = { app }
+console.log(app)
+//module.exports = { app }
+export { app as default}

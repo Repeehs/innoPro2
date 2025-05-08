@@ -7,7 +7,8 @@ import { Blog } from "./pages/Blog/blog";
 import { Product } from "./pages/Product/product";
 import { Footer } from './components/footer';
 import { ShopContextProvider } from './context/shopContext';
-import { AuthProvider } from "./context/AuthContext";
+//import { AuthProvider } from "./context/AuthContext";
+import { AuthProvider } from "./context/myAuthContext";
 import { Checkout } from './pages/Checkout/checkout';
 
 import PrivateRoute from "./authentication/PrivateRoute"
