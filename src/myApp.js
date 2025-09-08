@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const path = require('path');
 
 require('dotenv').config()
@@ -9,7 +10,7 @@ const { connection } = require('./connection');
 
 app.use(express.urlencoded({ extended: true })); // built-in middleware to handle urlencoded form data
 app.use(express.json()); // built-in middleware for json
-
+app.use(cors());
 
 app.post('api/user', async (req, res) => {
     try {
@@ -56,4 +57,4 @@ app.listen(port, () => {
 })
 console.log(app)
 //module.exports = { app }
-export { app as default}
+//export { app as default}

@@ -18,7 +18,7 @@ const db = getFirestore(app);
 const storage = getStorage(app);
 
 export { app as default, auth, db, storage, };
-console.log(app);
-console.log(auth);
-console.log(db);
-console.log(storage);
+//console.log(app);
+//console.log(auth);
+//console.log(db);
+//console.log(storage);

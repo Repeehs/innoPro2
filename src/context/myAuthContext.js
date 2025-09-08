@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react"
-import app from "../myApp"
+import api from '../api';
 
 const AuthContext = React.createContext()
 
@@ -12,7 +12,7 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true)
 
   async function signup(username, email, password) {
-    app.createUser(username, email, password)
+    //app.createUser(username, email, password)
   }
 
   async function login(username, password){

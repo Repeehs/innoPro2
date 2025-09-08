@@ -7,8 +7,8 @@ import { Blog } from "./pages/Blog/blog";
 import { Product } from "./pages/Product/product";
 import { Footer } from './components/footer';
 import { ShopContextProvider } from './context/shopContext';
-//import { AuthProvider } from "./context/AuthContext";
-import { AuthProvider } from "./context/myAuthContext";
+import { AuthProvider } from "./context/AuthContext";
+//import { AuthProvider } from "./context/myAuthContext";
 import { Checkout } from './pages/Checkout/checkout';
 
 import PrivateRoute from "./authentication/PrivateRoute"
@@ -17,6 +17,7 @@ import Dashboard from "./Dashboard"
 import Signup from "./authentication/Signup";
 import Login from "./authentication/Login";
 import ForgotPassword from "./authentication/ForgotPassword"
+import Testing from './pages/testing';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/testing" element={<Testing />} />
             </Routes>
             <Footer />
           </Router>

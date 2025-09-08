@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
-//import { useAuth } from "../context/AuthContext"
-import { useAuth } from "../context/myAuthContext"
+import { useAuth } from "../context/AuthContext"
+//import { useAuth } from "../context/myAuthContext"
 import { Link, useNavigate } from "react-router-dom"
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { updateProfile as updateProfileFirebase, getAuth } from "firebase/auth"; /* coi lại sau */
@@ -32,7 +32,7 @@ export default function Signup() {
         setError("")
         setLoading(true)
         await signup(usernameRef.current.value, emailRef.current.value, passwordRef.current.value)
-        /* 
+         
         .then(() => {
             let firebaseUser = getAuth().currentUser;
             return updateProfileFirebase(firebaseUser, { displayName: usernameRef.current.value }) 
@@ -44,7 +44,7 @@ export default function Signup() {
         }
         await setDoc(doc(db, `users`, getAuth().currentUser.uid), docData);
         //navigate("/user")
-        */
+        
         } catch (error) {
         setError("Failed to create an account")
         console.log(error)
